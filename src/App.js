@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Features from './Features';
 import Summary from './Summary';
 import Total from './Total';
+import Header from './Header'
 import slugify from 'slugify';
 import './App.css';
 
@@ -43,14 +44,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+        <Header />
         <main>
           <form className="main__form">
             <h2>Customize your laptop</h2>
             <Features 
-              features={this.props.features}
               state={this.state}
               slugify={slugify}
               USCurrencyFormat={USCurrencyFormat}
