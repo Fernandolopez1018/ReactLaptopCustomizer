@@ -1,5 +1,6 @@
 import React from 'react';
 import Total from './Total'
+import FeatureSummary from './FeatureSummary'
 
 
 class Cart extends React.Component {
