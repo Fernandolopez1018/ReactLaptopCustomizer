@@ -1,6 +1,6 @@
 import React from 'react';
 import Feature from './Feature'
-import {FEATURES} from './data'
+import {FEATURES} from '../data'
 
 class FeatureList extends React.Component {
   render() {

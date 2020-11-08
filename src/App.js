@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import FeatureList from './FeatureList';
-import Cart from './Cart';
+import FeatureList from './FeatureList/FeatureList';
+import Cart from './Cart/Cart';
 import Header from './Header'
 import slugify from 'slugify';
 import './App.css';
