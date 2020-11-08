@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Features from './Features';
-import Summary from './Summary';
-import Total from './Total';
+import FeatureList from './FeatureList';
+import Cart from './Cart';
 import Header from './Header'
 import slugify from 'slugify';
 import './App.css';
@@ -46,33 +45,16 @@ class App extends Component {
       <div className="App">
         <Header />
         <main>
-          <form className="main__form">
-            <h2>Customize your laptop</h2>
-            <Features 
-              state={this.state}
-              slugify={slugify}
-              USCurrencyFormat={USCurrencyFormat}
-              updateFeature={this.updateFeature}
-            />
-          </form>
-          <section className="main__summary">
-            <h2>Your cart</h2>
-            <Summary
-              state={this.state}
-              USCurrencyFormat={USCurrencyFormat} 
-            />
-            <div className="summary__total">
-              <div className="summary__total__label">
-                Total
-              </div>
-              <div className="summary__total__value">
-                <Total
-                  state={this.state}
-                  USCurrencyFormat={USCurrencyFormat}
-                />
-              </div>
-            </div>
-          </section>
+          <FeatureList 
+            state={this.state}
+            slugify={slugify}
+            USCurrencyFormat={USCurrencyFormat}
+            updateFeature={this.updateFeature}
+          />
+          <Cart
+            state={this.state}
+            USCurrencyFormat={USCurrencyFormat} 
+          />
         </main>
       </div>
     )
